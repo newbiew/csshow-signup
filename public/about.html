@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="en" class="no-js">
+<head>
+	<meta charset='UTF-8'>
+	<!-- www.phpied.com/conditional-comments-block-downloads/ -->
+	<!--[if IE]><![endif]-->
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../main/css/screen.css" />
+
+	<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+
+	<title>The Client Solutions Show</title>
+
+</head>
+
+<body>
+	<header class="site-header home">
+		<a href="#speaker-intro-login" id="loginbtn"><h1>The Client Solutions Show</h1></a>
+	</header>
+
+	<div id="speaker-login" class="speaker-login">
+		
+		<div class="wrap outer-wrap">
+			<div class="speaker-login_flex">
+				<div class="speakers-bio">
+					<figure>
+						<img src="../main/images/s-robert.png" alt="Robert Vinokurov">
+						<figcaption>
+							<p>
+								Robert Vinokurov
+								<small>
+									Executive Leader of Dell Technologies<br>
+									Client Solutions Group, ANZ
+								</small>
+							</p>
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="../main/images/s-future.png" alt="Future Crunch">
+						<figcaption>
+							<p>Future Crunch</p>
+						</figcaption>
+					</figure>
+				</div>
+				<div id="speaker-intro-login" class="speaker-intro-login">
+					<h3>Meet Our Speaker</h3>
+					<p>Tune in as our Keynote speakers uncover how collaboration between technology and people go hand-in-hand to create a positive and lasting impact on humanity.</p>
+					<p>Let Robert and the <a href="https://futurecrun.ch/" target="_blank">Future Crunch</a> pair shed light on the next big ‘must-have’ skill – adaptability – and its significance for both individuals and organisations to thrive in dynamic environments.</p>
+					<div class="login">
+						<form method="POST" action="https://clientsolutionshow.com/testing/auth">
+					<input type="email" name="email">
+					<input type="hidden" name="_csrf" value= <%= csrfToken %> />
+			        <input class="button-white" type="submit" value="Login">
+				    </form>
+					</div>
+					<p style="color:red" id="error" />
+				</div>
+			</div>
+		</div>
+
+	</div>
+			
+	<footer class="site-footer">
+		<div class="wrap outer-wrap">
+			<p><small>&copy;2020 Dell Technologies</small></p>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" integrity="sha256-bQmrZe4yPnQrLTY+1gYylfNMBuGfnT/HKsCGX+9Xuqo=" crossorigin="anonymous"></script>
+	<script src="../main/script/main.js"></script>
+	<script>
+		// let itemsArray = localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : [];
+		// if(itemsArray.length > 0){
+		// 	window.location.replace("https://clientsolutionshow.com/main");
+		// }
+		// function getParam(param) {
+		// 	return new URLSearchParams(window.location.search).get(param);
+		// }
+		// var error = getParam("e");
+		// if(error){
+		// 	document.getElementById('error').innerHTML = error
+		// }
+	</script>
+</body>
+</html>
